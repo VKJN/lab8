@@ -1,7 +1,9 @@
 ﻿begin
   var year := ReadInteger('Введите год: ');
+  Assert(year > 0);
+  
   if ((year mod 4 = 0) and (not (year mod 100 = 0) and (year mod 400 <> 0))) then
-    Print('Этот год високосный')
+    Print(366)
   else
-    Print('Этот год не високосный');
+    Print(365);
 end.
